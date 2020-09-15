@@ -4,10 +4,10 @@ import Post from "./Post";
 
 
 const Posts = ({syncPosts}) => {
-    if(!posts.length){
+    if(!syncPosts.length){
         return <p className="text-center">постов пока нет</p>
     }
-  return posts.map(post => <Post post={post} key={post} /> );
+  return syncPosts.map(post => <Post post={post} key={post} /> );
 };
 
 const mapStateToProps = (state) => {
