@@ -1,3 +1,4 @@
+import { CREATE_POST } from "./types";
 
 const initialState = {
     posts: [],
@@ -5,5 +6,15 @@ const initialState = {
 };
 
 export const postsReducer = (state=initialState, action) => {
-    return state;
+    switch (action.type) {
+        case CREATE_POST:
+            return {
+                ...state,
+                // posts: state.posts.concat([action.payload])// ore:
+                posts: [...state.posts, action.payload]
+            }
+        default:
+            return state;
+    }
+    
 }
