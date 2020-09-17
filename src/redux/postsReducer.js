@@ -16,7 +16,7 @@ export const postsReducer = (state=initialState, action) => {
         case FETCH_POSTS:
             return {
                 ...state,
-                fetchedPosts:action.payload
+                fetchedPosts: action.payload
             }
         default:
             return state;
